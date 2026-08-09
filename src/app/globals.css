@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* ==========================================================
+   FLUXFOR design tokens
+   - Brand navy/blue/cyan stay constant across themes and are
+     used for permanently-dark surfaces (header, hero, footer).
+   - Surface/text/border tokens flip between light and dark
+     theme via the .dark class (managed by next-themes).
+   ========================================================== */
+:root {
+  /* Brand (constant) */
+  --brand-ink: #0a1428;
+  --brand-ink-2: #0f2247;
+  --brand-ink-3: #142c58;
+  --brand-blue: #2451e0;
+  --brand-blue-2: #153099;
+  --brand-cyan: #22c7e5;
+  --brand-steel: #8492ac;
+  --brand-steel-dim: #5a6786;
+
+  /* Theme-aware surfaces (light default) */
+  --surface-page: #f3f5f8;
+  --surface-1: #ffffff;
+  --surface-2: #e7eaf1;
+  --text-primary: #0a1428;
+  --text-secondary: #5a6786;
+  --border-c: rgba(10, 20, 40, 0.1);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 28px;
+}
+
+.dark {
+  --surface-page: #0a1428;
+  --surface-1: #0f2247;
+  --surface-2: #142c58;
+  --text-primary: #ffffff;
+  --text-secondary: #8492ac;
+  --border-c: rgba(255, 255, 255, 0.09);
+}
+
+@theme inline {
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-ink-2: var(--brand-ink-2);
+  --color-brand-ink-3: var(--brand-ink-3);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-2: var(--brand-blue-2);
+  --color-brand-cyan: var(--brand-cyan);
+  --color-brand-steel: var(--brand-steel);
+  --color-brand-steel-dim: var(--brand-steel-dim);
+
+  --color-surface-page: var(--surface-page);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border-c: var(--border-c);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font-family: var(--font-body), sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background: var(--brand-cyan);
+  color: var(--brand-ink);
+}
+
+.eyebrow {
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+.eyebrow::before {
+  content: "";
+  width: 16px;
+  height: 1px;
+  background: currentColor;
+  display: inline-block;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--brand-blue);
+  color: #fff;
+  padding: 12px 20px;
+  z-index: 200;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus {
+  left: 0;
+}
