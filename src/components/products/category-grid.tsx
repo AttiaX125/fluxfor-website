@@ -39,13 +39,15 @@ const categories: ProductCategory[] = [
     id: "software-solutions",
     title: "Software Solutions",
     href: "/products/software-solutions",
-    image: "https://picsum.photos/seed/fluxfor-software/640/480",
+    imageLight: "/images/home/products/software-light.png",
+    imageDark: "/images/home/products/software-dark.png",
   },
   {
     id: "core-materials",
     title: "Transformer Core & Lamination Materials",
     href: "/products/core-materials",
-    image: "/images/products/core-materials/crgo-lamination-cores.png",
+    imageLight: "/images/home/products/transformer-light.png",
+    imageDark: "/images/home/products/transformer-dark.png",
   },
 ];
 

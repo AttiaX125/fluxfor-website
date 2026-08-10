@@ -5,7 +5,6 @@ import {
   SwitchgearIllustration,
   ControlPanelIllustration,
   MonitoringIllustration,
-  SoftwareIllustration,
 } from "@/components/product-illustrations";
 
 const products = [

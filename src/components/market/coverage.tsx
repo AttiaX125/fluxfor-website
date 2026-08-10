@@ -6,8 +6,7 @@ import { useEffect, useState } from "react";
 
 const countries = [
   "Egypt", "Saudi Arabia", "UAE", "Qatar", "Kuwait", "Bahrain", "Oman",
-  "Jordan", "Iraq", "Syria", "Lebanon", "Palestine", "Turkey",
-  "Iran", "Yemen", "Cyprus",
+  "Jordan"
 ];
 
 export function Coverage() {

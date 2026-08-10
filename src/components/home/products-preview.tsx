@@ -14,6 +14,14 @@ const products = [
     imageLight: "/images/home/products/bushings-light.png",
     imageDark: "/images/home/products/bushings-dark.png",
   },
+    {
+  title: "Transformer Core Materials",
+  description:
+    "High-quality electrical steel and amorphous metal materials engineered for efficient transformer cores and reliable magnetic performance.",
+  href: "/products/core-materials",
+    imageLight: "/images/home/products/transformer-light.png",
+    imageDark: "/images/home/products/transformer-dark.png",
+},
   {
     title: "Non-Electric Protection Devices",
     description: "Gas relays, pressure relief devices, oil level gauges, and temperature indicators for continuous transformer protection.",
@@ -21,13 +29,7 @@ const products = [
     imageLight: "/images/home/products/non-electric-protection-light.png",
     imageDark: "/images/home/products/non-electric-protection-dark.png",
   },
-  {
-    title: "Transformers Insulation Materials",
-    description: "Wood, pressboard, and paper-based insulation components engineered for transformer winding, core, and structural support.",
-    href: "/products/insulation-materials",
-    imageLight: "/images/home/products/insulation-materials-light.png",
-    imageDark: "/images/home/products/insulation-materials-dark.png",
-  },
+
 ];
 
 export function ProductsPreview() {
