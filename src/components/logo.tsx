@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function LogoMark({ className = "h-8 w-8" }: { className?: string }) {
   return (
     <svg viewBox="0 0 40 40" fill="none" className={className} aria-hidden="true">
@@ -26,11 +28,15 @@ export function LogoMark({ className = "h-8 w-8" }: { className?: string }) {
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
-    <span className={`inline-flex items-center gap-2.5 ${className}`}>
-      <LogoMark className="h-7 w-7 text-white" />
-      <span className="font-display text-[19px] font-bold tracking-tight text-white">
-        FLUXFOR
-      </span>
+    <span className={`inline-flex items-center ${className}`}>
+      <Image
+        src="/logo.png"
+        alt="FLUXFOR — Integrated Solutions"
+        width={220}
+        height={64}
+        priority
+        className="h-9 w-auto sm:h-10"
+      />
     </span>
   );
 }

@@ -118,3 +118,14 @@ h1, h2, h3, h4 {
 .skip-link:focus {
   left: 0;
 }
+@keyframes draw-x {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -1;
+  }
+}

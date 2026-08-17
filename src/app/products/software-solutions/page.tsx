@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, Check, ArrowRight } from "lucide-react";
 
@@ -58,7 +59,7 @@ const capabilities = [
 export default function SoftwareSolutionsPage() {
   return (
     <>
-      <section className="px-4 pb-14 pt-[112px] sm:px-6 sm:pt-[128px] lg:px-8">
+      <section className="px-4 pb-16 pt-[112px] sm:px-6 sm:pt-[128px] lg:px-8">
         <div className="mx-auto max-w-[1240px]">
           <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-[13px] text-text-secondary">
             <Link href="/" className="hover:text-brand-blue hover:underline underline-offset-2">Home</Link>
@@ -68,22 +69,60 @@ export default function SoftwareSolutionsPage() {
             <span className="text-text-primary">Software Solutions</span>
           </nav>
 
-          <div className="eyebrow mt-6 text-brand-blue-2 dark:text-brand-cyan">Software Solutions</div>
-          <h1 className="mt-4 font-display text-[clamp(28px,4vw,42px)] font-semibold leading-[1.1] text-text-primary">
-            DraftSight — 2D Drafting & 3D Design
-          </h1>
-          <p className="mt-5 max-w-[620px] text-[15.5px] leading-relaxed text-text-secondary">
-            FLUXFOR is an authorized reseller of DraftSight — the CAD platform
-            our own engineering team drafts substation layouts and panel
-            schematics with. Full native DWG compatibility means your existing
-            drawings and workflows carry over without disruption.
-          </p>
-          <Link
-            href="/contact?product=software-solutions"
-            className="mt-8 inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-brand-blue to-brand-cyan px-6 py-3 text-[14px] font-semibold text-white"
-          >
-            Request Licensing Options <ArrowRight size={15} />
-          </Link>
+          <div className="mt-10 grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <div className="eyebrow text-brand-blue-2 dark:text-brand-cyan">Software Solutions</div>
+              <h1 className="mt-4 font-display text-[clamp(28px,4vw,42px)] font-semibold leading-[1.1] text-text-primary">
+                DraftSight — 2D Drafting & 3D Design
+              </h1>
+              <p className="mt-5 max-w-[520px] text-[15.5px] leading-relaxed text-text-secondary">
+                FLUXFOR is an authorized reseller of DraftSight — the CAD platform
+                our own engineering team drafts substation layouts and panel
+                schematics with. Full native DWG compatibility means your existing
+                drawings and workflows carry over without disruption.
+              </p>
+              <Link
+                href="/contact?product=software-solutions"
+                className="group mt-8 inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-brand-blue to-brand-cyan px-6 py-3 text-[14px] font-semibold text-white transition-opacity hover:opacity-90"
+              >
+                Request Licensing Options
+                <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            </div>
+
+            {/* PHOTO 1 — hero image */}
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[16px] border border-border-c bg-surface-1 shadow-2xl shadow-brand-blue/[0.06]">
+              <Image
+                src="/images/products/software-solutions/hero.png"
+                alt="DraftSight CAD interface"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PHOTO 2 — "in action" showcase, browser-chrome style for a UI screenshot */}
+      <section className="px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1240px]">
+          <div className="overflow-hidden rounded-[14px] border border-border-c bg-surface-1 shadow-2xl shadow-brand-blue/[0.06]">
+            <div className="flex items-center gap-1.5 border-b border-border-c bg-surface-2/60 px-4 py-2.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#28C840]" />
+              <span className="ml-3 font-mono text-[11px] text-text-secondary">DraftSight — substation-layout-rev4.dwg</span>
+            </div>
+            <div className="relative aspect-[16/9] w-full">
+              <Image
+                src="/images/products/software-solutions/interface.png"
+                alt="DraftSight drafting workspace showing a substation layout"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
