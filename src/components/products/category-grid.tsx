@@ -15,9 +15,9 @@ interface ProductCategory {
 
 const categories: ProductCategory[] = [
   {
-    id: "non-electric-protection",
-    title: "Non-Electric Protection Devices",
-    href: "/products/non-electric-protection",
+    id: "Accessories and monitoring devices.",
+    title: "Accessories and monitoring devices.",
+    href: "/products/accessories-monitoring",
     imageLight: "/images/home/products/non-electric-protection-light.png",
     imageDark: "/images/home/products/non-electric-protection-dark.png",
   },

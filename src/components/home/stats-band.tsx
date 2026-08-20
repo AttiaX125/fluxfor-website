@@ -1,8 +1,8 @@
 const stats = [
   { value: "1,240+", label: "solutions we offer" },
-  { value: "180+", label: "Projects delivered" },
+  { value: "20+", label: "Years we served" },
   { value: "24/7", label: "Field response" },
-  { value: "14", label: "countries we serve" },
+  { value: "10+", label: "countries we serve" },
 ];
 
 export function StatsBand() {

@@ -23,9 +23,9 @@ const products = [
     imageDark: "/images/home/products/transformer-dark.png",
 },
   {
-    title: "Non-Electric Protection Devices",
+    title: "Accessories and monitoring devices.",
     description: "Gas relays, pressure relief devices, oil level gauges, and temperature indicators for continuous transformer protection.",
-    href: "/products/non-electric-protection",
+    href: "/products/accessories-monitoring",
     imageLight: "/images/home/products/non-electric-protection-light.png",
     imageDark: "/images/home/products/non-electric-protection-dark.png",
   },

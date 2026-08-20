@@ -17,10 +17,18 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    eyebrow: "Protection",
-    title: "Non-electric protection devices.",
+    eyebrow: "Core & Lamination",
+    title: "Transformer core & lamination materials.",
     ctaLabel: "View Category",
-    ctaHref: "/products/non-electric-protection",
+    ctaHref: "/products/core-materials",
+    imageDark: "/images/home/products/transformer-dark.png",
+    imageLight: "/images/home/products/transformer-light.png",
+  },
+  {
+    eyebrow: "Accessories",
+    title: "Accessories and monitoring devices.",
+    ctaLabel: "View Category",
+    ctaHref: "/products/accessories-monitoring",
     imageDark: "/images/home/products/non-electric-protection-dark.png",
     imageLight: "/images/home/products/non-electric-protection-light.png",
   },
@@ -120,22 +128,22 @@ export function HeroCarousel() {
         </div>
 
         {/* Arrows */}
-        <button
-          type="button"
-          onClick={() => goTo(index - 1)}
-          aria-label="Previous slide"
-          className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/20 text-white backdrop-blur-sm transition-colors hover:bg-black/35 sm:left-5"
-        >
-          <ChevronLeft size={22} />
-        </button>
-        <button
-          type="button"
-          onClick={() => goTo(index + 1)}
-          aria-label="Next slide"
-          className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/20 text-white backdrop-blur-sm transition-colors hover:bg-black/35 sm:right-5"
-        >
-          <ChevronRight size={22} />
-        </button>
+<button
+  type="button"
+  onClick={() => goTo(index - 1)}
+  aria-label="Previous slide"
+  className="absolute left-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/20 text-white backdrop-blur-sm transition-colors hover:bg-black/35 sm:left-5"
+>
+  <ChevronLeft size={22} />
+</button>
+<button
+  type="button"
+  onClick={() => goTo(index + 1)}
+  aria-label="Next slide"
+  className="absolute right-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/20 text-white backdrop-blur-sm transition-colors hover:bg-black/35 sm:right-5"
+>
+  <ChevronRight size={22} />
+</button>
 
         {/* Dots */}
         <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-2">
