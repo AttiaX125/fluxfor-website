@@ -27,7 +27,7 @@ export const navItems: NavItem[] = [
   href: "/products",
   children: [
     { label: "All Products", href: "/products" },
-    { label: "Non-Electric Protection Devices", href: "/products/non-electric-protection" },
+    { label: "Accessories and Monitoring Devices", href: "/products/accessories-monitoring" },
     { label: "Transformers Insulation Materials", href: "/products/insulation-materials" },
     { label: "Transformers Bushing", href: "/products/bushings" },
     { label: "Transformer Core & Lamination Materials", href: "/products/core-materials" },

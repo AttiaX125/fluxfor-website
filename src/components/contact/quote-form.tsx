@@ -4,14 +4,27 @@ import { useState } from "react";
 import { categories, subProductMap } from "@/lib/data/quote-categories";
 
 const countries = [
-  "United States",
-  "Canada",
-  "Mexico",
-  "United Kingdom",
-  "United Arab Emirates",
-  "Saudi Arabia",
+  "Algeria",
+  "Bahrain",
+  "Comoros",
+  "Djibouti",
   "Egypt",
-  "Other",
+  "Iraq",
+  "Jordan",
+  "Kuwait",
+  "Lebanon",
+  "Libya",
+  "Mauritania",
+  "Morocco",
+  "Oman",
+  "Palestine",
+  "Qatar",
+  "Saudi Arabia",
+  "Sudan",
+  "Syria",
+  "Tunisia",
+  "United Arab Emirates",
+  "Others"
 ];
 
 const inputClasses =

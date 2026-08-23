@@ -90,10 +90,10 @@ export default function SoftwareSolutionsPage() {
               </Link>
             </div>
 
-            {/* PHOTO 1 — hero image */}
+            {/* PHOTO 1 — hero image (placeholder until real photo is ready) */}
             <div className="relative aspect-[4/3] overflow-hidden rounded-[16px] border border-border-c bg-surface-1 shadow-2xl shadow-brand-blue/[0.06]">
               <Image
-                src="/images/products/software-solutions/hero.png"
+                src="https://picsum.photos/seed/fluxfor-software-1/900/675"
                 alt="DraftSight CAD interface"
                 fill
                 className="object-cover"
@@ -116,7 +116,7 @@ export default function SoftwareSolutionsPage() {
             </div>
             <div className="relative aspect-[16/9] w-full">
               <Image
-                src="/images/products/software-solutions/interface.png"
+                src="https://picsum.photos/seed/fluxfor-software-2/1600/900"
                 alt="DraftSight drafting workspace showing a substation layout"
                 fill
                 className="object-cover"

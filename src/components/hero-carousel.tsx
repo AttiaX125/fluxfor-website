@@ -51,7 +51,7 @@ const slides: Slide[] = [
 
     {
     eyebrow: "Software",
-    title: "Software solutions for the grid.",
+    title: "The 2D drafting and 3D design platform.",
     ctaLabel: "Explore",
     ctaHref: "/products/software-solutions",
     imageDark: "/images/home/products/software-dark.png",
@@ -69,6 +69,7 @@ export function HeroCarousel() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- required to avoid hydration mismatch with next-themes
     setMounted(true);
   }, []);
 

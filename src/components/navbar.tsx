@@ -38,10 +38,12 @@ export function Navbar() {
     };
   }, [mobileOpen]);
 
-  useEffect(() => {
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
     setMobileOpen(false);
     setMobileSubOpen(null);
-  }, [pathname]);
+  }
 
   return (
     <header className="fixed inset-x-0 top-0 z-[100] border-b border-white/[0.09] bg-[rgba(10,20,40,0.86)] backdrop-blur-md">
