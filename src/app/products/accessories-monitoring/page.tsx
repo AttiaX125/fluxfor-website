@@ -19,7 +19,7 @@ export default function NonElectricProtectionPage() {
         </div>
         <ProductCatalog
           products={nonElectricProtectionProducts}
-          categoryHref="/products/non-electric-protection"
+          categoryHref="/products/accessories-monitoring"
         />
       </div>
     </main>

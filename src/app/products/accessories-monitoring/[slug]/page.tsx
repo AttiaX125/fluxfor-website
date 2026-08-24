@@ -33,7 +33,7 @@ export default async function NonElectricProtectionDetailPage({
     <ProductDetailView
       product={product}
       categoryLabel="Non-Electric Protection Devices"
-      categoryHref="/products/non-electric-protection"
+       categoryHref="/products/accessories-monitoring"
     />
   );
 }
