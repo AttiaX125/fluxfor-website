@@ -29,7 +29,6 @@ const products = [
     imageLight: "/images/home/products/non-electric-protection-light.png",
     imageDark: "/images/home/products/non-electric-protection-dark.png",
   },
-
 ];
 
 export function ProductsPreview() {

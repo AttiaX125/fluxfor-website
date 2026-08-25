@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { MessageCircle, Phone } from "lucide-react";
+import type { MouseEvent as ReactMouseEvent } from "react";
+import { MessageCircle, Phone, Check } from "lucide-react";
 
 const PHONE_NUMBER = "201044944974"; // Egypt number: no + or leading 0
+const PHONE_DISPLAY = "+20 10 4494 4974";
 const PHONE_TEL_HREF = `tel:+${PHONE_NUMBER}`;
 const WHATSAPP_URL = `https://wa.me/${PHONE_NUMBER}`;
 
@@ -18,9 +20,15 @@ export function ContactChoiceButton({
 }: ContactChoiceButtonProps) {
   const [open, setOpen] = useState(false);
   const [coords, setCoords] = useState({ top: 0, left: 0 });
+  const [copied, setCopied] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(true); // default to mobile behavior until checked
 
   const buttonRef = useRef<HTMLButtonElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setIsTouchDevice(window.matchMedia("(pointer: coarse)").matches);
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -62,6 +70,24 @@ export function ContactChoiceButton({
     });
   }, [open]);
 
+  function handleCallClick(e: ReactMouseEvent<HTMLAnchorElement>): void {
+    if (isTouchDevice) return; // let the tel: link behave normally on mobile
+
+    e.preventDefault();
+    navigator.clipboard
+      .writeText(`+${PHONE_NUMBER.slice(0, 2)} ${PHONE_NUMBER.slice(2)}`)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => {
+          setCopied(false);
+          setOpen(false);
+        }, 1200);
+      })
+      .catch(() => {
+        window.location.href = PHONE_TEL_HREF;
+      });
+  }
+
   return (
     <>
       <button
@@ -81,10 +107,15 @@ export function ContactChoiceButton({
         >
           <a
             href={PHONE_TEL_HREF}
+            onClick={handleCallClick}
             className="flex items-center gap-3 px-4 py-3 text-[14px] text-text-primary transition-colors hover:bg-surface-2"
           >
-            <Phone size={16} className="text-brand-blue" />
-            Call Us
+            {copied ? (
+              <Check size={16} className="text-brand-cyan" />
+            ) : (
+              <Phone size={16} className="text-brand-blue" />
+            )}
+            {copied ? "Copied!" : isTouchDevice ? "Call Us" : PHONE_DISPLAY}
           </a>
 
           <a

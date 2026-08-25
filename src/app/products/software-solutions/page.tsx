@@ -94,7 +94,6 @@ export default function SoftwareSolutionsPage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-[16px] border border-border-c bg-surface-1 shadow-2xl shadow-brand-blue/[0.06]">
               <Image
                 src="/images/products/software/interface1.jpg"
-
                 alt="DraftSight CAD interface"
                 fill
                 className="object-cover"
